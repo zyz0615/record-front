@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h1,
+h2,
+h3 {
+    margin: 20px 0 20px 0;
+}
+
+h4,
+h5,
+h6 {
+    margin: 10px 0 10px 0;
+}
+
+section {
+    padding-bottom: 5px;
+}
+
+.margin-top20 {
+    margin-top: 20px;
+}
+
+.mint-button--normal {
+    padding: 0 24px;
+}
+
+.mint-button--small {
+    padding: 0 12px;
+}
+
+.mint-header-title {
+    font-size: 20px;
+}
+
+.mint-cell-title {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.mint-cell-label {
+    display: inline;
+    margin-left: 20px;
+}
+
+.mint-button--large {
+    display: block;
+    width: 94%;
+    margin-left: 3%;
+}
+
+.title-hidden .mint-radiolist-title {
+    display: none;
+}
+
+.mint-cell-label {
+    display: block;
+    margin-left: 0
+}
+
+.mint-tab-item-label {
+    font-size: 20px;
+    color: #26a2ff;
+}
+
+.mint-tab-container {
+    margin-top: 3px;
+}
