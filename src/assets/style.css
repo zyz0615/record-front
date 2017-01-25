@@ -4,6 +4,10 @@
     border: 0;
 }
 
+button {
+    font-size: 16px;
+}
+
 h1,
 h2,
 h3 {
