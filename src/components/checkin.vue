@@ -15,7 +15,7 @@
                 </mt-cell>
                 <section v-if="!actionListLoading && !actionListFailed">
                     <mt-cell v-for="action in actionList" :title="actionTitle(action)" :label="action.timestamp | localTime">
-                        <mt-button v-if="action.checked" type="primary" size="small" @click.native="checkOut(action)">签出</mt-button>
+                        <mt-button v-if="action.checked" type="primary" size="small" @click.native="checkOut()">签出</mt-button>
                         <mt-button v-if="!action.checked" type="primary" size="small" @click.native="checkin(action.actionName)">开始</mt-button>
                     </mt-cell>
                 </section>
@@ -159,22 +159,26 @@
                     }
                 });
             },
-            checkOut(checkin) {
-                let actionId = checkin && checkin.actionId
-                if (actionId) {
-                    let url = '/action/checkout';
-                    this.$http.post(url, {
-                            actionId: actionId,
-                            userId: this.userId
-                        })
-                        .then((response) => {
-                            let body = response.body
-                            alert(body.retMessage)
-                            this.getChecklist()
-                        });
-                } else {
-                    alert('Action id cannot be empty!')
-                }
+            checkOut() {
+                MessageBox.prompt('输入活动编号：').then(({
+                    value,
+                    action
+                }) => {
+                    if (!value) {
+                        return false;
+                    } else {
+                        let url = '/action/checkout';
+                        this.$http.post(url, {
+                                actionId: value,
+                                userId: this.userId
+                            })
+                            .then((response) => {
+                                let body = response.body
+                                alert(body.retMessage)
+                                this.getChecklist()
+                            });
+                    }
+                });
             },
             newAction() {
                 let actionId = '2017'
