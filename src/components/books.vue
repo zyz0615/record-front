@@ -113,7 +113,7 @@
                             alert(body.retMessage)
                         });
                 } else {
-                    alert('Book name cannot be empty!')
+                    alert('书名不能为空')
                 }
             }
         }

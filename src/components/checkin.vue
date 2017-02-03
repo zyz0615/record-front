@@ -194,7 +194,7 @@
                             alert(body.retMessage)
                         });
                 } else {
-                    alert('Action id cannot be empty!')
+                    alert('活动ID不能为空')
                 }
             }
         }
