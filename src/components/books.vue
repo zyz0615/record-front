@@ -110,6 +110,7 @@
                             let body = response.body
                             this.bookName = ''
                             this.bookType = '1'
+                            this.operation = '1'
                             alert(body.retMessage)
                         });
                 } else {

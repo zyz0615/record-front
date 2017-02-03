@@ -93,6 +93,7 @@
                         console.log(resp.body)
                         this.actionId = ''
                         this.actionName = ''
+                        this.operation = '2'
                         alert(resp.body.retMessage)
                     })
                 }
